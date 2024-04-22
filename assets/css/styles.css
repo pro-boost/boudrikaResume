@@ -427,22 +427,31 @@ body.dark-theme{
 
 
 /*=============== FOOTER ===============*/
-.footer{
-  padding-block:  0 8rem;
+.footer {
+  padding-block: 2.5rem 8rem;
+  width: 100%;
 }
 
-.footer__container{
+.footer__container {
   border-top: 2px solid var(--title-color);
   padding-top: 1.5rem;
-  grid-template-columns: repeat(2, max-content);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Ensure each column takes up half the width */
+  grid-template-columns: 160px 1fr;
   justify-content: space-between;
   row-gap: 2.5rem;
+  max-width: 100%; /* Ensure the container doesn't exceed the width of the footer */
 }
+
+.footer__info {
+  overflow-wrap: break-word;
+}
+
+
 
 .footer__title{
   font-size: var(--normal-font-size);
   margin-bottom: .5rem;
-  padding-top: 1.5rem;
 }
 
 .footer__info,
@@ -597,7 +606,7 @@ body.dark-theme{
     transition: background .4;
   }
   .resume__main{
-    grid-template-columns: 376px 1fr;
+    grid-template-columns: 345px 1fr;
   }
   .dark-theme .resume{
     box-shadow: 0 0 48px hsla(246, 50%, 4%, 0.4);
@@ -607,6 +616,10 @@ body.dark-theme{
     height: calc(var(--header-height) + 1.5rem);
     margin-inline: 1.5rem;
   }
+  .home__container{
+      height: 45rem;
+      padding-top: 3rem;
+    }
 
   .home__name{
     margin-bottom: .5rem;
@@ -638,12 +651,17 @@ body.dark-theme{
   }
   .home__profession_company{
     font-size: var(--font-medium);
+    padding-bottom: 1rem;
   }
   .home__profession_greenbelt{
-    font-size: var(--small-font-size);
+    font-size: var(--font-medium);
   }
   .home__geenbelt{
-    width: 2rem;
+    width: 4rem;
+  }
+  .home__profession_greenbelt-text{
+    font-size: var(--font-medium);
+    font-size: smaller;
   }
 
   .footer__container{
