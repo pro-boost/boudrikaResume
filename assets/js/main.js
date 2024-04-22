@@ -57,3 +57,19 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+/*=============== Change Language ===============*/
+document.getElementById('language-switcher').addEventListener('click', function() {
+    // Get the current page URL
+    var currentPageUrl = window.location.href;
+
+    // Check if the current page is the English version
+    if (currentPageUrl.indexOf('/index.html') !== -1) {
+        // If the current page is the English version, switch to the French version
+        window.location.href = 'index_fr.html';
+    } else if (currentPageUrl.indexOf('/index_fr.html') !== -1) {
+        // If the current page is the French version, switch to the English version
+        window.location.href = 'index.html';
+    }
+});

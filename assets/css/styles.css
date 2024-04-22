@@ -200,10 +200,19 @@ body.dark-theme{
   border-bottom: 2px solid var(--title-color);
 }
 
-.nav__logo{
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+#language-switcher {
+  display: inline-flex; /* Make the link and icon display inline */
+  align-items: center; /* Align items vertically */
+  color: var(--title-color); /* Text color */
+  font-size: var(--small-font-size); /* Font size */
 }
+
+/* Style for the globe icon */
+#language-switcher i {
+  margin-left: 5px; /* Add space between text and icon */
+  font-size: 1rem; /* Adjust icon size */
+}
+
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1023px){
@@ -337,7 +346,7 @@ body.dark-theme{
 }
 
 .home__img_geenbelt {
-    width: 30px; /* Adjust the width of the image as needed */
+    width: 40px; /* Adjust the width of the image as needed */
     height: auto; /* Maintain aspect ratio */
     margin-right: 10px; /* Add some margin to the right of the image for*/
 }
