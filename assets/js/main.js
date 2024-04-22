@@ -58,18 +58,17 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-
 /*=============== Change Language ===============*/
 document.getElementById('language-switcher').addEventListener('click', function() {
-    // Get the current page URL
-    var currentPageUrl = window.location.href;
+    // Get the current language from the HTML lang attribute
+    var currentLang = document.documentElement.lang;
 
-    // Check if the current page is the English version
-    if (currentPageUrl.indexOf('/index.html') !== -1) {
-        // If the current page is the English version, switch to the French version
-        window.location.href = 'index_fr.html';
-    } else if (currentPageUrl.indexOf('/index_fr.html') !== -1) {
-        // If the current page is the French version, switch to the English version
-        window.location.href = 'index.html';
-    }
+    // Toggle between English and French
+    var newLang = currentLang === 'en' ? 'fr' : 'en';
+
+    // Construct the new URL based on the current page
+    var newUrl = currentLang === 'en' ? 'index_fr.html' : 'index.html';
+
+    // Redirect to the new URL with the updated language
+    window.location.href = newUrl;
 });
