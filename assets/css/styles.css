@@ -78,6 +78,7 @@ img {
   height: auto;
 }
 
+
 /*=============== THEME ===============*/
 .change-theme{
   font-size: 1.25rem;
@@ -131,13 +132,16 @@ body.dark-theme{
   margin-inline: 1.5rem;
 }
 
+
 .grid {
   display: grid;
   gap: 1.5rem;
 }
 
-.section {
-  padding-block : 3rem 1rem; 
+.section{
+  padding-block: 5rem 1rem;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .section__title {
@@ -172,9 +176,9 @@ body.dark-theme{
 .resume__button-link{
   width: max-content;
   color: var(--text-color);
-  display: inline-flex;
   column-gap: .25rem;
   font-weight: var(--font-semi-bold);
+  cursor: pointer;
 }
 
 .resume__button-link:hover{
@@ -353,8 +357,6 @@ body.dark-theme{
 .home__profession_greenbelt-text {
   font-size: var(--small-font-size);
 }
-
-
 /*=============== ABOUT ===============*/
 .about__button{
   width: max-content;
@@ -387,7 +389,10 @@ body.dark-theme{
 }
 
 /*=============== languages===============*/
-
+.languages__list-text{
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
+}
 
 /*=============== EDUCATION ===============*/ 
 /* To add code or make changes to the section */
@@ -489,22 +494,20 @@ body.dark-theme{
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 350px){
+  .languages.section {
+    padding-bottom: 9rem; /* Adjust the value as needed */
+  }
   .container{
     margin-inline: 1rem;
   }
-
   .nav__menu{
     padding-inline: 2rem;
   }
   .section{
-    padding-block : 3rem 1rem; 
+    padding-block: 5rem 1rem;
+    padding-right: 0;
+    padding-left: 0;
   }
-
-  .languages__content{
-    grid-template-columns: max-content;
-    row-gap: 1rem;
-  }
-
   .footer__container{
     grid-template-columns: max-content;
     row-gap: 1.5rem;
@@ -513,14 +516,19 @@ body.dark-theme{
 
 /* For medium devices */
 @media screen and (min-width: 576px){
+
   .nav__menu{
     width: 320px;
     margin-inline: auto;
   }
   .section{
-    padding-block : 3rem 1rem; 
+    padding-block: 5rem 1rem;
+    padding-right: 0;
+    padding-left: 0;
   }
-
+  .container__right{
+    padding-bottom: 8rem;
+  }
   .footer__container{
     grid-template-columns: repeat(3, max-content);
   }
@@ -531,15 +539,13 @@ body.dark-theme{
 
 @media screen and (min-width: 768px){
   .section{
-    padding-block : 3rem 1rem; 
+    padding-block : 2rem 1rem; 
   }
   .section__title{
     margin: 0 0 2rem;
   }
 
-
-
-  .resume__left,
+ .resume__left,
   .resume__right{
     padding-inline: 1.5rem;
   }
@@ -685,7 +691,6 @@ body.dark-theme{
 
 .column__left {
   flex-basis: 50%; /* Adjust as needed */
-  padding-right: 2rem ;
 }
 .resume__data span{
   padding-bottom: .75rem;
@@ -694,12 +699,14 @@ body.dark-theme{
   display: none;
 }
 @media (max-width: 768px) {
-  .about__container{
+.about__container{
     display: flex;
     flex-direction: column;
 }
-
-.about{
+.resume__main{
+  padding-bottom : 9rem !important ;
+}
+.section{
   padding-block: 5rem 1rem;
   padding-right: 0;
   padding-left: 0;
