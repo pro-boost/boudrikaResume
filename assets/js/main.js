@@ -72,3 +72,21 @@ document.getElementById('language-switcher').addEventListener('click', function(
     // Redirect to the new URL with the updated language
     window.location.href = newUrl;
 });
+
+
+/*==============Toggle list of missions ========*/
+function toggleList(listId, iconId) {
+    var list = document.getElementById(listId);
+    var icon = document.getElementById(iconId);
+  
+    if (list.style.display === "none" || list.style.display === "") {
+      list.style.display = "block";
+      icon.classList.remove('fa-chevron-right');
+      icon.classList.add('fa-chevron-down');
+    } else {
+      list.style.display = "none";
+      icon.classList.remove('fa-chevron-down');
+      icon.classList.add('fa-chevron-right');
+    }
+  }
+  

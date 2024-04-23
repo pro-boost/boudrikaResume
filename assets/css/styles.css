@@ -708,13 +708,15 @@ body.dark-theme{
 }
 
 .column__left {
-  flex-basis: 20%; /* Adjust as needed */
+  flex-basis: 50%; /* Adjust as needed */
   padding-right: 2rem ;
 }
 .resume__data span{
   padding-bottom: 1.5rem;
 }
-
+.resume__data-ul {
+  display: none;
+}
 @media (max-width: 768px) {
   .about__container{
     display: flex;
