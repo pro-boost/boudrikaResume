@@ -137,7 +137,7 @@ body.dark-theme{
 }
 
 .section {
-  padding-block: 5rem 1rem;
+  padding-block : 3rem 1rem; 
 }
 
 .section__title {
@@ -387,24 +387,7 @@ body.dark-theme{
 }
 
 /*=============== languages===============*/
-.languages__content,
-.languages__list{
-  display: grid;
-}
 
-.languages__content{
-  grid-template-columns: repeat(2, max-content);
-  align-items: baseline;
-  column-gap: 3rem;
-}
-
-.languages__list{
-  row-gap: 1rem;
-}
-
-.languages__list li{
-  margin: 0;
-}
 
 /*=============== EDUCATION ===============*/ 
 /* To add code or make changes to the section */
@@ -427,13 +410,6 @@ body.dark-theme{
 .resume__data{
   padding-bottom: .75rem;
 }
-/*=============== CERTIFICATES ===============*/ 
-/* To add code or make changes to the section */
-
-
-/*=============== REFERENCES ===============*/ 
-/* To add code or make changes to the section */
-
 
 /*=============== FOOTER ===============*/
 .footer {
@@ -521,7 +497,7 @@ body.dark-theme{
     padding-inline: 2rem;
   }
   .section{
-    padding-block : 2rem; 
+    padding-block : 3rem 1rem; 
   }
 
   .languages__content{
@@ -542,7 +518,7 @@ body.dark-theme{
     margin-inline: auto;
   }
   .section{
-    padding-block : 3rem; 
+    padding-block : 3rem 1rem; 
   }
 
   .footer__container{
@@ -555,7 +531,7 @@ body.dark-theme{
 
 @media screen and (min-width: 768px){
   .section{
-    padding-top: 2rem; 
+    padding-block : 3rem 1rem; 
   }
   .section__title{
     margin: 0 0 2rem;
@@ -712,7 +688,7 @@ body.dark-theme{
   padding-right: 2rem ;
 }
 .resume__data span{
-  padding-bottom: 1.5rem;
+  padding-bottom: .75rem;
 }
 .resume__data-ul {
   display: none;
