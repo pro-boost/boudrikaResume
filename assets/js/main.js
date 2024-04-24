@@ -92,11 +92,11 @@ function toggleList(listId, iconId) {
 
   if (list.style.display === "none" || list.style.display === "") {
     list.style.display = "block";
-    icon.classList.remove("fa-chevron-right");
-    icon.classList.add("fa-chevron-down");
+    icon.classList.remove("ri-arrow-right-double-line");
+    icon.classList.add("ri-arrow-up-double-line");
   } else {
     list.style.display = "none";
-    icon.classList.remove("fa-chevron-down");
-    icon.classList.add("fa-chevron-right");
+    icon.classList.remove("ri-arrow-up-double-line");
+    icon.classList.add("ri-arrow-right-double-line");
   }
 }
