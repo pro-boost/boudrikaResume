@@ -7,18 +7,22 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --title-color: #28282e; /* Dark gray */
-  --text-color: #43424b; /* Medium gray */
-  --body-color: rgb(218, 231, 243); /* Light blue */
-  --container-color: #fafaff; /* Light gray */
+  --title-color: #28282e;
+  /* Dark gray */
+  --text-color: #43424b;
+  /* Medium gray */
+  --body-color: rgb(218, 231, 243);
+  /* Light blue */
+  --container-color: #fafaff;
+  /* Light gray */
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
   --biggest-font-size: 1.75rem;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .875rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.875rem;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -35,7 +39,7 @@
   :root {
     --biggest-font-size: 3rem;
     --normal-font-size: 1rem;
-    --small-font-size: .938rem;
+    --small-font-size: 0.938rem;
   }
 }
 
@@ -56,10 +60,13 @@ body {
   font-weight: var(--font-medium);
   background-color: var(--container-color);
   color: var(--text-color);
-  transition: background .4s;
+  transition: background 0.4s;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
@@ -78,51 +85,56 @@ img {
   height: auto;
 }
 
-
 /*=============== THEME ===============*/
-.change-theme{
+.change-theme {
   font-size: 1.25rem;
   color: var(--title-color);
   cursor: pointer;
 }
 
 /*========== Variables Dark theme ==========*/
-body.dark-theme{
-  --title-color: #FFFFFF; /* White */
-  --text-color: #eaebf3; /* Light gray */
-  --body-color: #212529; /* Black */
-  --container-color: #364352; /* Dark gray */
+body.dark-theme {
+  --title-color: #ffffff;
+  /* White */
+  --text-color: #eaebf3;
+  /* Light gray */
+  --body-color: #212529;
+  /* Black */
+  --container-color: #364352;
+  /* Dark gray */
 }
 
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
-.dark-theme :is(.nav__menu, .scrollup){
-  background-color: hsl(230, 24%, 15%); 
+.dark-theme :is(.nav__menu, .scrollup) {
+  background-color: hsl(230, 24%, 15%);
 }
 
 .dark-theme .home__square-2 rect {
-  stroke: rgb(230, 231, 250); /* Change the color to white */
+  stroke: rgb(230, 231, 250);
+  /* Change the color to white */
 }
 
 .dark-theme .home__square-1 rect {
-  stroke: rgb(230, 231, 250); /* Change the color to white */
+  stroke: rgb(230, 231, 250);
+  /* Change the color to white */
 }
 
-.dark-theme .home__profession{
+.dark-theme .home__profession {
   text-shadow: 0 0 6px hsl(245, 21%, 12%);
 }
 
-.dark-theme::-webkit-scrollbar{
+.dark-theme::-webkit-scrollbar {
   background-color: hsl(245, 16%, 15%);
 }
 
-.dark-theme::-webkit-scrollbar-thumb{
+.dark-theme::-webkit-scrollbar-thumb {
   background-color: hsl(246, 16%, 25%);
 }
 
-.dark-theme::-webkit-scrollbar-thumb:hover{
+.dark-theme::-webkit-scrollbar-thumb:hover {
   background-color: hsl(244, 16%, 35%);
 }
 
@@ -132,13 +144,12 @@ body.dark-theme{
   margin-inline: 1.5rem;
 }
 
-
 .grid {
   display: grid;
   gap: 1.5rem;
 }
 
-.section{
+.section {
   padding-block: 5rem 1rem;
   padding-right: 0;
   padding-left: 0;
@@ -150,53 +161,53 @@ body.dark-theme{
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
   border-bottom: 2px solid var(--title-color);
-  padding-bottom: .75rem;
+  padding-bottom: 0.75rem;
 }
 
 /*=============== RESUME ===============*/
-.resume__title{
+.resume__title {
   font-size: var(--normal-font-size);
   display: inline-flex;
   align-items: center;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
-.resume__title i{
+.resume__title i {
   font-size: 1.5rem;
   font-weight: initial;
 }
 
-.resume__data{
+.resume__data {
   display: grid;
-  row-gap: .5rem;
+  row-gap: 0.5rem;
   padding-left: 1.5rem;
   font-size: var(--small-font-size);
 }
 
-.resume__button-link{
+.resume__button-link {
   width: max-content;
   color: var(--text-color);
-  column-gap: .25rem;
+  column-gap: 0.25rem;
   font-weight: var(--font-semi-bold);
   cursor: pointer;
 }
 
-.resume__button-link:hover{
+.resume__button-link:hover {
   text-decoration: underline;
 }
 
 /*=============== HEADER & NAV ===============*/
-.header{
+.header {
   position: fixed;
   width: 100%;
   background-color: var(--container-color);
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  transition: background .4s;
+  transition: background 0.4s;
 }
 
-.nav{
+.nav {
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -205,22 +216,27 @@ body.dark-theme{
 }
 
 #language-switcher {
-  display: inline-flex; /* Make the link and icon display inline */
-  align-items: center; /* Align items vertically */
-  color: var(--title-color); /* Text color */
-  font-size: var(--small-font-size); /* Font size */
+  display: inline-flex;
+  /* Make the link and icon display inline */
+  align-items: center;
+  /* Align items vertically */
+  color: var(--title-color);
+  /* Text color */
+  font-size: var(--small-font-size);
+  /* Font size */
 }
 
 /* Style for the globe icon */
 #language-switcher i {
-  margin-left: 5px; /* Add space between text and icon */
-  font-size: 1rem; /* Adjust icon size */
+  margin-left: 5px;
+  /* Add space between text and icon */
+  font-size: 1rem;
+  /* Adjust icon size */
 }
 
-
 /* Navigation for mobile devices */
-@media screen and (max-width: 1023px){
-  .nav__menu{
+@media screen and (max-width: 1023px) {
+  .nav__menu {
     position: fixed;
     bottom: 1.5rem;
     left: 0;
@@ -228,49 +244,49 @@ body.dark-theme{
     background: var(--container-color);
     box-shadow: 0 4px 24px hsla(246, 53%, 17%, 0.25);
     margin-inline: 1.5rem;
-    border-radius: .5rem;
-    padding: 1.25rem 1.5rem; 
-    transition: background .4s;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    transition: background 0.4s;
   }
 }
 
-.nav__list{
+.nav__list {
   display: flex;
   justify-content: space-between;
 }
 
-.nav__link{
+.nav__link {
   position: relative;
   font-size: 1.25rem;
   color: var(--title-color);
 }
 
-.nav__link::after{
-  content: '';
+.nav__link::after {
+  content: "";
   position: absolute;
   width: 32px;
   height: 2px;
   background: var(--title-color);
   left: -6px;
   bottom: -8px;
-  transition:  transform .3s, opacity .3s;
+  transition: transform 0.3s, opacity 0.3s;
   opacity: 0;
 }
 
-.nav__link:hover::after{
+.nav__link:hover::after {
   opacity: 1;
   transform: translateY(-4px);
 }
 
 /* Active link */
-.active-link::after{
+.active-link::after {
   opacity: 1;
   transform: translateY(-4px);
 }
 
 /*=============== HOME ===============*/
-.home__container{
-  display: flex ;
+.home__container {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -280,28 +296,30 @@ body.dark-theme{
   row-gap: 0;
 }
 
-.home__name{
+.home__name {
   font-size: var(--biggest-font-size);
   font-weight: var(--font-semi-bold);
   letter-spacing: 2px;
 }
 
-.home__name{
-  margin-bottom: .25rem;
+.home__name {
+  margin-bottom: 0.25rem;
 }
 
 .home__blob {
   position: relative;
   justify-self: center;
-  bottom: -20PX;
+  bottom: -20px;
 }
 
 .home__perfil {
   width: 260px;
   height: 170px;
-  background: linear-gradient(132deg,
-              hsl(228, 28%, 76%) 25%,
-              hsl(227, 13%, 42%) 105%);
+  background: linear-gradient(
+    132deg,
+    hsl(228, 28%, 76%) 25%,
+    hsl(227, 13%, 42%) 105%
+  );
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -314,91 +332,99 @@ body.dark-theme{
 }
 
 .home__square-1,
-.home__square-2{
+.home__square-2 {
   position: absolute;
   width: 70px;
 }
 
-.home__square-1{
+.home__square-1 {
   top: 0;
   left: -2.5rem;
   rotate: 15deg;
 }
 
-.home__square-2{
+.home__square-2 {
   right: -3.6rem;
   bottom: 2rem;
   rotate: -5deg;
 }
 
-.home__profession{
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items horizontally */
-    text-align: center; /* Center align text */
-    margin: 0;
-    justify-content: space-between;
-    height: 8rem;
+.home__profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center align items horizontally */
+  text-align: center;
+  /* Center align text */
+  margin: 0;
+  justify-content: space-between;
+  height: 8rem;
 }
+
 .home__profession_company {
   font-size: smaller;
 }
 
 .home__profession_greenbelt {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
+  /* Align items vertically */
 }
 
 .home__img_geenbelt {
-    width: 40px; /* Adjust the width of the image as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add some margin to the right of the image for*/
+  width: 40px;
+  /* Adjust the width of the image as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-right: 10px;
+  /* Add some margin to the right of the image for*/
 }
+
 .home__profession_greenbelt-text {
   font-size: var(--small-font-size);
 }
+
 /*=============== ABOUT ===============*/
-.about__button{
+.about__button {
   width: max-content;
   color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   display: flex;
   align-items: center;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 }
 
-.about__button i{
+.about__button i {
   font-size: 1rem;
 }
 
 .about__button:hover,
-.about__social-link:hover{
+.about__social-link:hover {
   text-decoration: underline;
 }
 
-.about__social{
+.about__social {
   display: flex;
   column-gap: 1rem;
 }
 
-.about__social-link{
+.about__social-link {
   color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
 }
 
 /*=============== languages===============*/
-.languages__list-text{
+.languages__list-text {
   font-size: var(--normal-font-size);
   margin-bottom: 1rem;
 }
 
-/*=============== EDUCATION ===============*/ 
+/*=============== EDUCATION ===============*/
 /* To add code or make changes to the section */
 
-
-/*=============== WORK ===============*/ 
+/*=============== WORK ===============*/
 
 .resume__data-li {
   padding-top: 10px;
@@ -408,12 +434,12 @@ body.dark-theme{
 
 .resume__data-ul {
   padding-top: 10px;
-  padding-left: 10px; 
+  padding-left: 10px;
 }
 
 .resume__title,
-.resume__data{
-  padding-bottom: .75rem;
+.resume__data {
+  padding-bottom: 0.75rem;
 }
 
 /*=============== FOOTER ===============*/
@@ -426,262 +452,296 @@ body.dark-theme{
   border-top: 2px solid var(--title-color);
   padding-top: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Ensure each column takes up half the width */
+  grid-template-columns: repeat(2, 1fr);
+  /* Ensure each column takes up half the width */
   grid-template-columns: 160px 1fr;
   justify-content: space-between;
   row-gap: 2.5rem;
-  max-width: 100%; /* Ensure the container doesn't exceed the width of the footer */
+  max-width: 100%;
+  /* Ensure the container doesn't exceed the width of the footer */
 }
 
-.footer__title{
+.footer__title {
   font-size: var(--normal-font-size);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-.footer__link{
+.footer__link {
   font-size: var(--small-font-size);
 }
 
-.footer__link{
+.footer__link {
   color: var(--text-color);
   overflow-wrap: break-word;
 }
 
-.footer__link:hover{
+.footer__link:hover {
   text-decoration: underline;
-} 
+}
+
 /*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar{
-  width: .6rem;
-  border-radius: .5rem;
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
   background-color: hsl(237, 16%, 75%);
 }
 
-::-webkit-scrollbar-thumb{
-  border-radius: .5rem;
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
   background-color: hsl(236, 16%, 65%);
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: hsl(240, 16%, 55%);
 }
+
 /*=============== SCROLL UP ===============*/
-.scrollup{
+.scrollup {
   position: fixed;
   right: 1rem;
   bottom: -50%;
   display: inline-flex;
   padding: 6px;
   background-color: var(--container-color);
-  box-shadow:0 4px 16px hsla(40, 48%, 4%, .15);
+  box-shadow: 0 4px 16px hsla(40, 48%, 4%, 0.15);
   font-size: 1.25rem;
   color: var(--title-color);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   z-index: var(--z-tooltip);
-  transition: bottom .4s, transform .4s, background .4s;
+  transition: bottom 0.4s, transform 0.4s, background 0.4s;
 }
 
-.scrollup:hover{
-  transform: translateY(-.25rem);
+.scrollup:hover {
+  transform: translateY(-0.25rem);
 }
 
 /* Show Scroll Up */
-.show-scroll{
+.show-scroll {
   bottom: 7rem;
 }
 
-
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 350px){
+@media screen and (max-width: 350px) {
   .languages.section {
-    padding-bottom: 9rem; /* Adjust the value as needed */
+    padding-bottom: 9rem;
+    /* Adjust the value as needed */
   }
-  .container{
+
+  .container {
     margin-inline: 1rem;
   }
-  .nav__menu{
+
+  .nav__menu {
     padding-inline: 2rem;
   }
-  .section{
+
+  .section {
     padding-block: 5rem 1rem;
     padding-right: 0;
     padding-left: 0;
   }
-  .footer__container{
+
+  .footer__container {
     grid-template-columns: max-content;
     row-gap: 1.5rem;
   }
 }
 
 /* For medium devices */
-@media screen and (min-width: 576px){
-
-  .nav__menu{
+@media screen and (min-width: 576px) {
+  .nav__menu {
     width: 320px;
     margin-inline: auto;
   }
-  .section{
+
+  .section {
     padding-block: 5rem 1rem;
     padding-right: 0;
     padding-left: 0;
   }
-  .container__right{
+
+  .container__right {
     padding-bottom: 8rem;
   }
-  .footer__container{
+
+  .footer__container {
     grid-template-columns: repeat(3, max-content);
   }
-  .show-scroll{
+
+  .show-scroll {
     bottom: 3rem;
   }
 }
 
-@media screen and (min-width: 768px){
-  .section{
-    padding-block : 2rem 1rem; 
+@media screen and (min-width: 768px) {
+  .section {
+    padding-block: 2rem 1rem;
   }
-  .section__title{
+
+  .section__title {
     margin: 0 0 2rem;
   }
 
- .resume__left,
-  .resume__right{
+  .resume__left,
+  .resume__right {
     padding-inline: 1.5rem;
   }
 
-  .header{
+  .header {
     position: initial;
   }
-  .nav{
+
+  .nav {
     margin: 0;
   }
+
   .nav__menu,
-  .scrollup{
+  .scrollup {
     display: none;
   }
 
-  .home{
+  .home {
     grid-column: 1 / 3;
   }
-  .home__container{
+
+  .home__container {
     height: 35rem;
     padding-top: 1.5rem;
   }
-  .home__blob{
+
+  .home__blob {
     padding-bottom: 40px;
   }
-  .home__perfil{
+
+  .home__perfil {
     margin-top: 5rem;
     width: 400px;
     height: 170px;
   }
-  .home__img{
+
+  .home__img {
     width: 20rem;
   }
-  .home__profession_greenbelt-text{
+
+  .home__profession_greenbelt-text {
     font-size: 18px;
   }
 
-  .footer{
+  .footer {
     padding-block: 2.5rem 2rem;
   }
 }
 
 /* For large devices */
-@media screen and (min-width: 1024px){
-  body{
+@media screen and (min-width: 1024px) {
+  body {
     background-color: var(--body-color);
     margin-block: 3rem;
   }
 
-  .resume{
+  .resume {
     background-color: var(--container-color);
     box-shadow: 0 0 48px hsla(242, 48%, 12%, 0.2);
     margin-inline: auto;
-    transition: background .4;
+    transition: background 0.4;
   }
 
-  .dark-theme .resume{
+  .dark-theme .resume {
     box-shadow: 0 0 48px hsla(246, 50%, 4%, 0.4);
   }
 
-  .nav{
+  .nav {
     height: calc(var(--header-height) + 1.5rem);
     margin-inline: 1.5rem;
   }
-  .home__container{
-      height: 45rem;
-      padding-top: 3rem;
-    }
 
-  .home__name{
-    margin-bottom: .5rem;
+  .home__container {
+    height: 45rem;
+    padding-top: 3rem;
   }
-  .home__blob{
+
+  .home__name {
+    margin-bottom: 0.5rem;
+  }
+
+  .home__blob {
     padding-bottom: 50px;
   }
-  .home__perfil{
+
+  .home__perfil {
     margin-top: 5rem;
     width: 500px;
     height: 270px;
   }
-  .home__img{
+
+  .home__img {
     width: 25rem;
   }
+
   .home__square-1,
-  .home__square-2{
+  .home__square-2 {
     width: 100px;
   }
-  .home__square-1{
+
+  .home__square-1 {
     left: -4rem;
   }
-  .home__square-2{
+
+  .home__square-2 {
     right: -4rem;
     bottom: 2rem;
   }
-  .home__profession{
+
+  .home__profession {
     padding-bottom: 10rem;
   }
-  .home__profession_company{
+
+  .home__profession_company {
     font-size: var(--font-medium);
     padding-bottom: 1rem;
   }
-  .home__profession_greenbelt{
+
+  .home__profession_greenbelt {
     font-size: var(--font-medium);
   }
-  .home__geenbelt{
+
+  .home__geenbelt {
     width: 4rem;
   }
-  .home__profession_greenbelt-text{
+
+  .home__profession_greenbelt-text {
     font-size: var(--font-medium);
     font-size: smaller;
   }
 
-  .footer__container{
+  .footer__container {
     margin-inline: 1.5rem;
     padding-top: 2rem;
   }
 }
 
-.about{
+.about {
   padding-right: 2rem;
   padding-left: 2rem;
   padding-bottom: 0;
   padding-top: 0;
 }
-.about__container{
-    display: flex;
-    justify-content: flex-start;
-    line-height: 2;
 
+.about__container {
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2;
 }
-.resume-mission{
+
+.resume-mission {
   font-size: var(--font-medium);
 }
-.about__container-left{
+
+.about__container-left {
   padding-right: 4rem;
 }
+
 .column__container {
   display: flex;
   justify-content: space-between;
@@ -690,30 +750,38 @@ body.dark-theme{
 }
 
 .column__left {
-  flex-basis: 50%; /* Adjust as needed */
+  flex-basis: 50%;
+  /* Adjust as needed */
 }
-.resume__data span{
-  padding-bottom: .75rem;
+
+.resume__data span {
+  padding-bottom: 0.75rem;
 }
+
 .resume__data-ul {
   display: none;
 }
+
 @media (max-width: 768px) {
-.about__container{
+  .about__container {
     display: flex;
     flex-direction: column;
-}
-.resume__main{
-  padding-bottom : 9rem !important ;
-}
-.section{
-  padding-block: 5rem 1rem;
-  padding-right: 0;
-  padding-left: 0;
-}
-.about__container-left{
-  padding-right: 0;
-}
+  }
+
+  .resume__main {
+    padding-bottom: 9rem !important;
+  }
+
+  .section {
+    padding-block: 5rem 1rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .about__container-left {
+    padding-right: 0;
+  }
+
   .column__container {
     display: flex;
     flex-direction: column;
@@ -728,5 +796,4 @@ body.dark-theme{
   .column__left {
     order: 2;
   }
-
 }
